@@ -40,8 +40,7 @@ def get_masked_billnumber(billnumber):
 
 def get_masked_message(message):
     msg_split = message.split(' ')
-    # if msg_split[0] == 'Счет':
-    #     number_hidden = get_masked_billnumber(msg_split[1])
+
     if msg_split[1].isdigit() is True:
         if len(msg_split[1]) == 20:
             number_hidden = get_masked_billnumber(msg_split[1])
